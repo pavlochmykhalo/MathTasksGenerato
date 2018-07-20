@@ -58,7 +58,7 @@ namespace MathTasksGenerato
                     taskArray[i] = i + 1 + ") " + firstArray[i] + " - " + secondArray[i] + " =";
                     solvedArray[i] = i + 1 + ") " + firstArray[i] + " - " + secondArray[i] + " = " + resultArray[i];
                 }
-
+                //Here we generate task for multiplication
                 if (i >= 100 && i <= 149)
                 {
                     firstArray[i] = randomNumber.Next(2, 12);
