@@ -18,7 +18,6 @@ namespace MathTasksGenerato
             Console.Write("Please enter for how many sets of tasks do you need:");
             int days;
             isItIntNumeric = int.TryParse(Console.ReadLine(), out days);
-            //days = int.Parse(Console.ReadLine());
             for (int x = 1; x <= days; x++)
             {
                 Generator(x);
