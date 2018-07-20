@@ -12,11 +12,17 @@ namespace MathTasksGenerato
         static Random randomNumber = new Random();
         static void Main(string[] args)
         {
+            bool isItIntNumeric = false;
+            while (isItIntNumeric == false)
+            { 
             Console.Write("Please enter for how many sets of tasks do you need:");
-            int days = int.Parse(Console.ReadLine());
+            int days;
+            isItIntNumeric = int.TryParse(Console.ReadLine(), out days);
+            //days = int.Parse(Console.ReadLine());
             for (int x = 1; x <= days; x++)
             {
                 Generator(x);
+            }
             }
 
         }
