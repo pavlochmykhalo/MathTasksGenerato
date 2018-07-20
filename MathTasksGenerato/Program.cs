@@ -37,7 +37,6 @@ namespace MathTasksGenerato
                 if (i <= 49)
                 {
                     resultArray[i] = firstArray[i] + secondArray[i];
-                    //Console.WriteLine(firstArray[i] + " + " + secondArray[i] + " = " + resultArray[i]);
                     taskArray[i] = $"{i + 1}) {firstArray[i]} + {secondArray[i]} = ";
                     solvedArray[i] = i + 1 + ") " + firstArray[i] + " + " + secondArray[i] + " = " + resultArray[i];
                 }
