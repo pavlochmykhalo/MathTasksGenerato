@@ -32,8 +32,7 @@ namespace MathTasksGenerato
             int[] firstArray = new int[200];
             int[] secondArray = new int[200];
             int[] resultArray = new int[200];
-            string[] taskArray = new string[200];
-            string[] solvedArray = new string[200];
+            string[] taskArray = new string[400];
             for (int i = 0; i <= 199; i++)
             {
                 firstArray[i] = randomNumber.Next(1, 100);
@@ -43,7 +42,7 @@ namespace MathTasksGenerato
                 {
                     resultArray[i] = firstArray[i] + secondArray[i];
                     taskArray[i] = $"{i + 1}) {firstArray[i]} + {secondArray[i]} = ";
-                    solvedArray[i] = i + 1 + ") " + firstArray[i] + " + " + secondArray[i] + " = " + resultArray[i];
+                    taskArray[i+200] = i + 1 + ") " + firstArray[i] + " + " + secondArray[i] + " = " + resultArray[i];
                 }
                 // Here we generate task for minus
                 if (i >= 50 && i <= 99)
@@ -61,7 +60,7 @@ namespace MathTasksGenerato
                         resultArray[i] = firstArray[i] - secondArray[i];
                     }
                     taskArray[i] = i + 1 + ") " + firstArray[i] + " - " + secondArray[i] + " =";
-                    solvedArray[i] = i + 1 + ") " + firstArray[i] + " - " + secondArray[i] + " = " + resultArray[i];
+                    taskArray[i+200] = i + 1 + ") " + firstArray[i] + " - " + secondArray[i] + " = " + resultArray[i];
                 }
                 //Here we generate task for multiplication
                 if (i >= 100 && i <= 149)
@@ -70,7 +69,7 @@ namespace MathTasksGenerato
                     secondArray[i] = randomNumber.Next(2, 12);
                     resultArray[i] = firstArray[i] * secondArray[i];
                     taskArray[i] = i + 1 + ") " + firstArray[i] + " X " + secondArray[i] + " =";
-                    solvedArray[i] = i + 1 + ") " + firstArray[i] + " X " + secondArray[i] + " = " + resultArray[i];
+                    taskArray[i+200] = i + 1 + ") " + firstArray[i] + " X " + secondArray[i] + " = " + resultArray[i];
                 }
                 if (i >= 150 && i <= 199)
                 {
@@ -82,15 +81,14 @@ namespace MathTasksGenerato
                     firstArray[i] = ResultOfFloipOver[1];
                     resultArray[i] = firstArray[i] / secondArray[i];
                     taskArray[i] = i + 1 + ") " + firstArray[i] + " / " + secondArray[i] + " =";
-                    solvedArray[i] = i + 1 + ") " + firstArray[i] + " / " + secondArray[i] + " = " + resultArray[i];
+                    taskArray[i+200] = i + 1 + ") " + firstArray[i] + " / " + secondArray[i] + " = " + resultArray[i];
+                    
                 }
 
             }
 
             string pathTasks = @"C:\Ddrive\zzzzzPersonal_projects\Task_generator\tasks" + dayNumber + ".txt";
-            string pathSolved = @"C:\Ddrive\zzzzzPersonal_projects\Task_generator\solved" + dayNumber + ".txt";
             File.WriteAllLines(pathTasks, taskArray);
-            File.WriteAllLines(pathSolved, solvedArray);
 
         }
 
